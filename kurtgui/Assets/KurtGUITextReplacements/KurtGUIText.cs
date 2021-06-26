@@ -44,14 +44,15 @@ public class KurtGUIText : MonoBehaviour
 
 	public Color color = Color.white;
 
-	public int fontSize;
-
 	public TextAnchor anchor;
 	public TextAlignment alignment;
 
 	[Header( "Fraction of screen:")]
 	public float w = 0.10f;
 	public float h = 0.05f;
+
+	[Header( "Fraction of screen height:")]
+	public float fontSize;
 
 	const string SkinBaseResourcesPath = "KurtGUI/SKINBASE";
 	static GUISkin SKINBASE
@@ -98,7 +99,7 @@ public class KurtGUIText : MonoBehaviour
 
 			if (fontSize > 0)
 			{
-				style.fontSize = fontSize;
+				style.fontSize = (int)(KurtGUIRects.ScreenSize.y * fontSize);
 			}
 
 			modifiedSkin.label = style;

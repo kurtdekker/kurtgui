@@ -45,13 +45,21 @@ public static class KurtGUIRects
 {
 	public static Rect ScreenRect( float x, float y, float w, float h)
 	{
-		return new Rect( Screen.width * x, Screen.height * y,
-			Screen.width * w, Screen.height * h);
+		return new Rect( ScreenSize.x * x, ScreenSize.y * y,
+			ScreenSize.x * w, ScreenSize.y * h);
 	}
 
 	public static Vector2 ScreenPos( float x, float y)
 	{
-		return new Vector2( Screen.width * x, Screen.height * y);
+		return new Vector2( ScreenSize.x * x, ScreenSize.y * y);
+	}
+
+	public static Vector2 ScreenSize
+	{
+		get
+		{
+			return new Vector2( Screen.width, Screen.height);
+		}
 	}
 
 	#if UNITY_EDITOR

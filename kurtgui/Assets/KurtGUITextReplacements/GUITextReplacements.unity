@@ -274,11 +274,11 @@ MonoBehaviour:
 
     Bottom items are KurtGUIText and KurtGUITexture'
   color: {r: 1, g: 1, b: 0, a: 1}
-  fontSize: 20
   anchor: 4
   alignment: 1
   w: 1
   h: 0.2
+  fontSize: 0.05
 --- !u!4 &403558895
 Transform:
   m_ObjectHideFlags: 0
@@ -438,11 +438,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: new KurtGUIText
   color: {r: 0, g: 1, b: 0.25517225, a: 1}
-  fontSize: 0
   anchor: 4
   alignment: 1
-  w: 0.2
-  h: 0.05
+  w: 0.3
+  h: 0.1
+  fontSize: 0.05
 --- !u!4 &1710237194
 Transform:
   m_ObjectHideFlags: 0
