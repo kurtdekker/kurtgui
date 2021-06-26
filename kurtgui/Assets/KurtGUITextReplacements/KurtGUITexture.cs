@@ -43,6 +43,9 @@ public class KurtGUITexture : MonoBehaviour
 
 	public Color color = Color.white;
 
+	[Header( "My improvements:")]
+	public bool HeightControlsWidth = true;
+
 	void OnGUI()
 	{
 		Vector3 scale = transform.localScale;
@@ -52,6 +55,11 @@ public class KurtGUITexture : MonoBehaviour
 		float h = scale.y;
 
 		Rect r = KurtGUIRects.ScreenRect( 0, 0, w, h);
+
+		if (HeightControlsWidth)
+		{
+			r.width = (texture.width * r.height) / texture.height;
+		}
 
 		float x = position.x;
 		float y = 1.0f - position.y;

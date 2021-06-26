@@ -42,15 +42,16 @@ public class KurtGUIText : MonoBehaviour
 	[Multiline]
 	public string text;
 
+	public Color color = Color.white;
+
+	public int fontSize;
+
 	public TextAnchor anchor;
 	public TextAlignment alignment;
 
-	public Color color = Color.white;
-
+	[Header( "Fraction of screen:")]
 	public float w = 0.10f;
 	public float h = 0.05f;
-
-	public int fontSize;
 
 	const string SkinBaseResourcesPath = "KurtGUI/SKINBASE";
 	static GUISkin SKINBASE
